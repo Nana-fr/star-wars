@@ -1,8 +1,8 @@
 function Footer() {
     return(
-        <footer className="py-5 text-center bg-dark">
+        <footer className="mt-auto py-3 text-center bg-dark">
             <section className="text-white">
-                <p>Come to the dark side</p>
+                <p>The Force will be with you. Always.</p>
             </section>
         </footer>
     );
