@@ -1,9 +1,9 @@
 function Header() {
     return(
-        <header className="bg-dark py-5">
+        <header className="py-5">
             <section className="container text-center text-white">
-                <h1 className="text-warning">Star Wars</h1>
-                <p className="lead">Que la force soit avec toi</p>
+                <h1 className="text-warning Starjhol">Star Wars</h1>
+                <p className="Starjedi mt-3 mb-0">May the Force be with you</p> 
             </section>
         </header>
     )

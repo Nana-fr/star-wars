@@ -3,20 +3,32 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import Homepage from './components/homepage/Homepage';
+import Categorypage from './components/categorypage/Categorypage';
+import Itempage from './components/itempage/Itempage';
 import Searchpage from './components/searchpage/Searchpage';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/homepage" element={<Homepage />} />
-          <Route path="/searchpage" element={<Searchpage />} />
-          <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>} />
+          <Route index element={<Homepage />} />
+          <Route path="category" element={<Categorypage />}>
+            <Route path=":categoryId" element={<Categorypage />} />
+          </Route>
+          <Route path="category/:categoryId/item" element={<Itempage />}>
+            <Route path=":itemId" element={<Itempage />} />
+          </Route>
+          <Route path="searchpage" element={<Searchpage />} />
+          <Route path="*" element={<main className="container text-center Starjout text-white my-5"><p>Error: This path goes to the dark side! Go back immediately!</p></main>} />
         </Route>
       </Routes>
     </BrowserRouter>
