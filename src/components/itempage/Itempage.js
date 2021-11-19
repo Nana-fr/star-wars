@@ -1,13 +1,12 @@
 import { useLocation } from 'react-router-dom'
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
 function Itempage() {
 
-    let params = useParams();
     const location = useLocation()
-    const { url } = location.state
+    const { url } = location.state;
+    const { name } = location.state
     console.log(url)
 
     const [error, setError] = useState(null);
@@ -19,7 +18,6 @@ function Itempage() {
         .then(function(response){
             console.log(response.data)
             setData(response.data)
-            // setItems(response.data.results);
             setIsLoaded(true);
         })
         .catch(function(error){
@@ -28,25 +26,20 @@ function Itempage() {
     }, [])
 
     if (error) {
-        return <div className="text-center">Error: not found</div>;
+        return <div className="text-center Starjout text-white my-5">Error</div>;
     }
       
     if (!isLoaded) {
-        return <div className="text-center">The force is loading...</div>;
+        return <div className="text-center Starjout text-white my-5">The force is loading...</div>;
     }
 
-    
-
-
-    // {typeof data[item] === "object" ? Object.values(data[item]).join(" - ") : data[item]}
-
     return(
-        <main className="container text-center mb-5">
-            <h2 className="py-5 text-decoration-underline">Data about {params.itemId}</h2>
-            <table className="text-center table table-bordered table-striped align-middle my-2">
+        <main className="container d-flex flex-column align-items-center text-center text-white mb-5">
+            <h2 className="py-5 text-decoration-underline Starjout">Data about {name.toLowerCase()}</h2>
+            <table className="text-white table table-bordered align-middle my-2">
                 <tbody>
                 {Object.keys(data).map((item) => (
-                    <tr><td>{item}</td><td>{typeof data[item] === Object ? Object.values(data[item]).join(" - ") : data[item]}</td></tr>
+                    <tr><td>{item}</td><td>{typeof data[item] === "object" && data[item] !== null ? Object.values(data[item]).map(x => <li>{x}</li>) : data[item]}</td></tr>
                 ))}
                 </tbody>
             </table>

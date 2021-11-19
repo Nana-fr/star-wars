@@ -1,49 +1,109 @@
+/* GENERALE RULES */
+
+body {
+  background-image: url("/src/img/background.jpg");
+  background-position: center center;
+  background-size: contain;
+}
+nav, footer {
+  background: radial-gradient(#727272, rgb(15, 15, 15));
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration:none;
+  color: inherit;
+}
 img {
   width: 50%;
 }
+h1 {
+  font-size: 2.5rem;
+}
+a:hover {
+  color: #ffc107;
+}
+
+/* UTILITY CLASSES */
+
+.card {
+  width: 18rem;
+}
+
+/* TABLE */
 
 .table {
   box-sizing: border-box;
   width: 100%;
 }
+tr:nth-child(even), thead {
+  background-color: rgba(192, 192, 192, 0.250);
+}
+tbody>tr:hover {background-color: silver; color: black}
 
+/* FONT-FAMILY */
 
-
-/* .App {
-  text-align: center;
+@font-face {
+  font-family: 'Starjhol';
+  src: local('Starjhol'), url(./font/Starjhol.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Starjout';
+  src: local('Starjout'), url(./font/Starjout.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Starjedi';
+  src: local('Starjedi'), url(./font/Starjedi.ttf) format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Starjout {
+  font-family: "Starjout";
+}
+.Starjhol {
+  font-family: "Starjhol";
+}
+.Starjedi {
+  font-family: "Starjedi";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* MEDIA QUERY */
+
+@media (min-width: 576px){
+  header>section>p {
+    font-size: 1.4rem;
+  }
+  footer>section>p {
+    font-size: 1.2rem;
+  }
+  main p, td {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+  .card {
+    width: 13rem;
+  }
+  .table {
+    width: 85%;
+  }
+  th {
+    font-size: 1.4rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 768px){
+  .table {
+    width: 80%;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 992px){
+  .table {
+    width: 60%;
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

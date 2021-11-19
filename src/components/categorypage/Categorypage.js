@@ -45,27 +45,27 @@ function handleClickPrevious() {
 
 if(error) {
     return (
-        <div className="text-center">
-            Error: You're going to the dark side
+        <div className="text-center Starjout text-white my-5">
+            Error: Something went wrong.
         </div>
     )
 }
 
 if(!isLoaded) {
     return (
-        <div className="text-center my-5">
+        <div className="text-center Starjout text-white my-5">
             The force is loading...
         </div>
     )
 }
 
     return(
-        <main className="container text-center py-5">
-            <h2 className="text-decoration-underline pb-5">List of {params.categoryId}</h2>
-            <ul>
-                {items.map(item => <Item name={item[Object.keys(item)[0]]} url={item.url} />)}
+        <main className="container text-center text-white py-5">
+            <h2 className="text-decoration-underline Starjout pb-5">List of {params.categoryId}</h2>
+            <ul className="mb-5">
+                {items.map(item => <Item name={item[Object.keys(item)[0]]} id={params.categoryId} url={item.url} />)}
             </ul>
-            <button onClick={handleClickPrevious} className="btn btn-dark m-3">Previous</button><button onClick={handleClickNext} className="btn btn-dark m-3">Next</button>
+            <button onClick={handleClickPrevious} className="btn btn-dark Starjout m-3">Previous</button><button onClick={handleClickNext} className="btn btn-dark Starjout m-3">Next</button>
         </main>
     )
 }

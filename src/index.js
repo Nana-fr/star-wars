@@ -14,6 +14,7 @@ import Categorypage from './components/categorypage/Categorypage';
 import Itempage from './components/itempage/Itempage';
 import Searchpage from './components/searchpage/Searchpage';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -23,11 +24,11 @@ ReactDOM.render(
           <Route path="category" element={<Categorypage />}>
             <Route path=":categoryId" element={<Categorypage />} />
           </Route>
-          <Route path="item" element={<Itempage />}>
+          <Route path="category/:categoryId/item" element={<Itempage />}>
             <Route path=":itemId" element={<Itempage />} />
           </Route>
           <Route path="searchpage" element={<Searchpage />} />
-          <Route path="*" element={<main style={{ padding: "1rem" }}><p>Error: You're going to the dark side!</p></main>} />
+          <Route path="*" element={<main className="container text-center Starjout text-white my-5"><p>Error: This path goes to the dark side! Go back immediately!</p></main>} />
         </Route>
       </Routes>
     </BrowserRouter>

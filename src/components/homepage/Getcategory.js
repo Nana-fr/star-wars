@@ -15,10 +15,7 @@ function Getcategory() {
           setIsLoaded(true);
           let data = result;
           setItems(data)
-          // for (let item in result) {
-          //   let x = items.concat(item);
-          //   setItems(items => items.concat(x)); 
-          // } 
+        
         },
         (error) => {
           setIsLoaded(true);
@@ -28,23 +25,45 @@ function Getcategory() {
   }, [])
 
   if (error) {
-    return <div className="text-center">Error: You're going to the dark side</div>;
+    return <div className="text-center Starjout text-white my-5">Error: Something went wrong.</div>;
   }
   
   if (!isLoaded) {
-    return <div className="text-center">The force is loading...</div>;
+    return <div className="text-center Starjout text-white my-5">The force is loading...</div>;
   }
+
+  const card = Object.keys(items).map((item) => (<Card key={item} item={item}/>));
 
   return (
       <div className="container d-flex flex-wrap justify-content-center text-center mb-5">
-        {Object.keys(items).map((item) => (
-          <Card key={item} item={item}/>
-        ))}
-        {/* {items.map(item => (
-          <Card key={item} item={item}/>
-        ))} */}
+        {card}
       </div>
     );
 }
 
-export default Getcategory;
+export default Getcategory; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (let item in result) {
+          //   let x = items.concat(item);
+          //   setItems(items => items.concat(x)); 
+          // } 
+          
+          
+          
+          {/* {items.map(item => (
+          <Card key={item} item={item}/>
+        ))} */}
