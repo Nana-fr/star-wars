@@ -35,7 +35,7 @@ a:hover {
 
 .table {
   box-sizing: border-box;
-  width: 100%;
+  width: 90%;
 }
 tr:nth-child(even), thead {
   background-color: rgba(192, 192, 192, 0.250);
@@ -76,7 +76,7 @@ tbody>tr:hover {background-color: silver; color: black}
   footer>section>p {
     font-size: 1.2rem;
   }
-  main p, td {
+  main p, td, small {
     font-size: 1.2rem;
   }
   h1 {
@@ -103,7 +103,50 @@ tbody>tr:hover {background-color: silver; color: black}
 }
 
 @media (min-width: 992px){
-  .table {
-    width: 60%;
+  aside {
+    width: 15%;
+  }
+
+  .bg {
+    width: 70%;
+    background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgb(76, 138, 255) 2%, rgba(255, 255, 255, 0.1) 5%, rgba(0, 0, 0) 50%, rgba(255, 255, 255, 0.1) 95%, rgba(76, 138, 255) 98%, rgba(0, 0, 0, 0.5) 100%);
+    padding: 0 0.8rem 0rem 0.8rem;
+    animation: color;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  /* @keyframes color {
+    0% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.48) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.480) 95%, rgba(0, 0, 0, 0.5) 100%)};
+    20% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.450) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.450) 95%, rgba(0, 0, 0, 0.5) 100%)};
+    40% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.420) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.420) 95%, rgba(0, 0, 0, 0.5) 100%)};
+    60% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.390) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.390) 95%, rgba(0, 0, 0, 0.5) 100%)};
+    80% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.420) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.420) 95%, rgba(0, 0, 0, 0.5) 100%)};
+    90% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.450) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.450) 95%, rgba(0, 0, 0, 0.5) 100%)};
+    100% {background: repeating-linear-gradient(90deg, (0, 0, 0, 0.5) 0%, rgba(0, 89, 255, 0.480) 5%, black 8%, black 92%, rgba(0, 89, 255, 0.480) 95%, rgba(0, 0, 0, 0.5) 100%)};
+  } */
+
+  .bg2 {
+    width: 50%;
+    background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(76, 138, 255) 2%, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0.5) 95%, rgba(76, 138, 255) 98%, rgba(0, 0, 0, 0) 100%);
+    padding: 0 0.8rem 0rem 0.8rem;
+    animation: color;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .w-80 {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px){
+  aside {
+    width: 25%;
+  }
+  .bg {
+    width: 50%;
+  }
+  .bg2 {
+    width: 50%;
   }
 }

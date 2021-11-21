@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import slugify from 'react-slugify';
 
-
-
 function Item(props) {
 
     const slugName = slugify(props.name);

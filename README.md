@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Project n°7: Star Wars Fansite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Star Wars Fansite was made with React using the API Swapi (https://swapi.co/) to get all the data about Star Wars universe.
 
-## Available Scripts
+## Functional specifications:
 
-In the project directory, you can run:
+### Basic features:
 
-### `npm start`
+2 pages minimum:
+* Homepage display by default all the categories of data about Star Wars, via request to API swapi.
+* Search page: the user can search for a character by his ID. Everytime the user types on his keyboard the research is display under the input.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### To go further:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* A page displaying a list of the category's data with buttons previous and next to see the rest of the list. Exemple: On the homepage, John clicks on category "people", he is redirected to the corresponding page and sees a list of 10 names. If he clicks on next button he will see the next 10 names.
+* A page displaying all the data about a specific element. Exemple: In our previous exemple, John chooses to click on Luke Skywalker, he is then redirected to the corresponding page and sees all the data about Luke Skywalker.
 
-### `npm test`
+### My personnal adding features:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Buttons previous and next are only displayed if needed.
+* A counter for the list of category's data indicating the current page and how many pages there are in total.
 
-### `npm run build`
+## Technical specifications:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Last version of React
+* API Swapi
+* Request http with or without axios
+* Bootstrap 5 for the design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Sources:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Icons: https://www.iconfinder.com/
+    - star wars icons by Symbolicons
+    - camera icon Kreasi Kanvas
+    - planet icon by www.wishforge.games
+* font-family: https://www.dafont.com/ star_jedi by Boba Fonts
+* background image: https://wallpapertag.com/wallpaper/full/c/f/e/408911-free-download-night-sky-stars-wallpaper-1920x1080-for-ipad-pro.jpg
+* all the gif: https://giphy.com
