@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
-      <Nav /> 
+      <Nav />
       <Outlet /> 
       <Footer />
     </div>
