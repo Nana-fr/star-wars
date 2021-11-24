@@ -16,7 +16,7 @@ function Getcategory() {
         (result) => {
           setIsLoaded(true);
           let data = result;
-          setItems(data)
+          setItems(data);
         
         },
         (error) => {
