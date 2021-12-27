@@ -21,7 +21,7 @@ function Searchpage() {
                 <h2 className="text-decoration-underline Starjout py-5">Search a character by id:</h2>
                 <div className="d-flex flex-column align-items-center">
                     <p className="w-80 py-3">You can find all data about a character by his id. Choose a number between 1 and 83. May the force be with you.</p>
-                    <input type="text" onChange={handleChange} placeholder="Ex: 1"></input>
+                    <input type="text" value={inputValue} onChange={handleChange} placeholder="Ex: 1"></input>
                     <Getdata id={inputValue}/>
                 </div>
             </article>

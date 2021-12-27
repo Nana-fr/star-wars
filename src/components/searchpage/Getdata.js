@@ -19,25 +19,25 @@ function Getdata(props) {
 
   // request
   useEffect(() => {
-    let active = true;
+    // let active = true;
         fetch(url)
         .then(res => res.json(), setIsLoaded(false), setError(null))
         .then(
             (result) => {
                 setIsLoaded(true);
                 let newData = result;
-                if (active) {
+                // if (active) {
                 setData(newData);
-                }
+                // }
             },
             (error) => {
             setIsLoaded(true);
             setError(error);
             },
         )
-        return () => {
-        active = false;
-        }
+        // return () => {
+        // active = false;
+        // }
   }, [url])
 
     if (error) {

@@ -47,7 +47,7 @@ function Itempage() {
             </aside>
             <article className="bg2 container d-flex flex-column align-items-center pb-5">
                 <h2 className="py-5 text-decoration-underline Starjout">Data about {name.toLowerCase()}</h2>
-                <table className="table table-bordered align-middle text-white my-2">
+                <table className="table table-responsive table-bordered text-white my-2">
                     <tbody>
                     {row}
                     </tbody>
