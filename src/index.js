@@ -21,13 +21,13 @@ ReactDOM.render(
       <Routes>
         <Route path="star-wars/" element={<App />}>
           <Route index element={<Homepage />} />
-          <Route path="star-wars/category" element={<Categorypage />}>
+          <Route path="/star-wars/category" element={<Categorypage />}>
             <Route path=":categoryId" element={<Categorypage />} />
           </Route>
-          <Route path="star-wars/category/:categoryId/item" element={<Itempage />}>
+          <Route path="/star-wars/category/:categoryId/item" element={<Itempage />}>
             <Route path=":itemId" element={<Itempage />} />
           </Route>
-          <Route path="star-wars/searchpage" element={<Searchpage />} />
+          <Route path="/star-wars/searchpage" element={<Searchpage />} />
           <Route path="*" element={<main className="container text-center Starjout text-white my-5"><p>Error: This path goes to the dark side! Go back immediately!</p></main>} />
         </Route>
       </Routes>
