@@ -53,7 +53,7 @@ function Getdata(props) {
                 ))
 
     return (
-        <table className="text-white table table-bordered align-middle my-5">
+        <table className="text-white table-bordered align-middle my-5">
             <thead>
                 <tr>
                     <th colspan="2" className="fs-4 text-decoration-underline py-3">Data of {data.name}</th>

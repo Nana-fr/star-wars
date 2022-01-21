@@ -12,7 +12,7 @@ function Card(props) {
             <article className="card-body">
                 <h5 className="card-title">{props.item}</h5>
                 <p className="card-text Starjedi">All data on {props.item}</p>
-                <Link to={`/category/${props.item}`} className="btn btn-dark">See</Link>
+                <Link to={`/star-wars/category/${props.item}`} className="btn btn-dark">See</Link>
             </article>
         </div>
     )
